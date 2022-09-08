@@ -1,20 +1,21 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
+
     {% if article != 'None' %}
         {{title}}
     {% else %}
         Page Not Found
     {% endif %}
-    
+
 {% endblock %}
 
 {% block body %}
+
     {% if article != 'None' %}
-    {{article|safe}}
+        {{article|safe}}
     {% else %}
-    404: Page Not Found
+        404: Page Not Found
     {% endif %}
     
-
 {% endblock %}
