@@ -12,9 +12,12 @@ def index(request):
 
 def article(request, name):
     entry = util.get_entry(name)
-    
     if entry:
-        print(markdown(entry))
         return render(request, "encyclopedia/article.html",{
+            "title":name.capitalize(),
             "article": markdown(entry)
+        })
+    else:
+        return render(request, "encyclopedia/article.html",{
+            "article": "None"
         })
