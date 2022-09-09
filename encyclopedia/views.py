@@ -1,8 +1,9 @@
+from cProfile import label
 from django.http import HttpResponse
 from django.shortcuts import render
 from markdown2 import markdown
-
 from . import util
+from .forms import AddPage
 
 
 def index(request):
@@ -21,3 +22,8 @@ def article(request, name):
         return render(request, "encyclopedia/article.html",{
             "article": "None"
         })
+
+def newpage(request):
+    return render(request, "encyclopedia/newpage.html",{
+        'form': AddPage(),
+    }) 
