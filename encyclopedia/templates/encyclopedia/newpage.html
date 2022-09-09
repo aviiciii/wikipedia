@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
-
+    <h1>Create a New Page</h1>
+    {{message}}
     <form action = '{% url 'encyclopedia:newpage' %}' method = 'post'>
         {% csrf_token %}
         {{form.as_p}}
