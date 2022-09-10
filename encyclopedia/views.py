@@ -139,7 +139,7 @@ def search(request):
                     substrings.add(entry)
 
             return render(request, 'encyclopedia/search.html', {
-                'entries': substrings,
+                'entries': sorted(substrings),
                 'search': q
             })
     return render(request, 'encyclopedia/search.html')
