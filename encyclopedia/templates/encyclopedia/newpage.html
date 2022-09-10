@@ -6,7 +6,7 @@
 
 {% block body %}
     
-    <h1>Create a New Page</h1>
+    <h1 class="col-sm-10">Create a New Page</h1>
     
     <form action = '{% url 'encyclopedia:newpage' %}' method = 'post'>
         {% csrf_token %}

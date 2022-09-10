@@ -9,11 +9,11 @@
     <br>
     
     {% if entries %}
-        <ul>
+    <ul class="list-group">
             {% for entry in entries %}
-                <li><a href='{% url 'encyclopedia:article' name=entry %}'>{{ entry }}</a></li>
+                <a class="list-group-item list-group-item-action" href='{% url 'encyclopedia:article' name=entry %}'>{{ entry }}</a>
             {% endfor %}
-        </ul>
+    </ul>
     {% elif search %}
         <h4>No records named '{{ search }}' found.</h4>
     {% else %}

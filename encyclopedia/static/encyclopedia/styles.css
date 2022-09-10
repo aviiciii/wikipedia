@@ -30,10 +30,13 @@ textarea {
 .main {
     padding: 10px;
 }
-
+.search_div{
+    padding: 10px;
+}
 .search {
-    width: 100%;
-    font-size: 15px;
+    height: 50px;
+    width: 96%;
+    font-size: 20px;
     line-height: 15px;
 }
 
@@ -45,4 +48,35 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+.body_spacing {
+    padding-left: 4vh;
+}
+
+.list-group-item{
+    font-size: larger;
+    width: 70%;
+}
+
+.nav-link a{
+    font-size: larger;
+}
+
+.nav-link a:hover{
+    text-decoration:none;
+}
+
+.navbar-brand{
+    font-size: 46px;
+}
+
+.article{
+    font-size: 24px;
+}
+.article h1{
+    padding-bottom: 20px;
+}
+.article .edit_btn{
+    padding-top: 20px;
 }

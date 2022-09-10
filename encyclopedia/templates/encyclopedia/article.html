@@ -11,14 +11,14 @@
 {% endblock %}
 
 {% block body %}
-
-    {% if article != 'None' %}
-        {{article|safe}}
-        
-        <a href="{% url 'encyclopedia:edit' name=title %}" class="btn btn-outline-dark btn-sm">Edit Page</a>
-
-    {% else %}
-        404: Page Not Found
-    {% endif %}
-    
+    <div class='article'>
+        {% if article != 'None' %}
+            {{article|safe}}
+            <div class='edit_btn'>
+                <a href="{% url 'encyclopedia:edit' name=title %}" class="btn btn-outline-dark">Edit Page</a>
+            </div>
+        {% else %}
+            404: Page Not Found
+        {% endif %}
+    </div>
 {% endblock %}
