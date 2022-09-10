@@ -23,6 +23,10 @@ textarea {
     width: 70%;
 }
 
+.form-control{
+    width: 70%;
+}
+
 .main {
     padding: 10px;
 }
