@@ -120,4 +120,8 @@ def random(request):
     return redirect('encyclopedia:article', name= random_choice)
 
 def search(request):
-    ...
+    print('coming into search')
+    if request.method =='GET':
+        q = request.GET.get('q', '')
+        print(q)
+        return render(request, 'encyclopedia/search.html')
