@@ -1,10 +1,7 @@
-from ast import Add
-from cProfile import label
-#from pyexpat.errors import messages
 from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from markdown2 import markdown
+from random import choice
 from . import util
 from .forms import AddPage, EditPage
 
@@ -67,7 +64,6 @@ def newpage(request):
 
 
 def edit(request, name):
-    
 
     if request.method == 'POST':
         form = EditPage(request.POST)
@@ -116,3 +112,12 @@ def edit(request, name):
         else:
             messages.error(request, f'Page Not Found')
             return redirect('encyclopedia:index')
+
+
+def random(request):
+    entries = util.list_entries()
+    random_choice = choice(entries)
+    return redirect('encyclopedia:article', name= random_choice)
+
+def search(request):
+    ...
