@@ -20,7 +20,7 @@
                 
                 <form action='{% url 'encyclopedia:search' %}' method = 'POST'>
                     {% csrf_token %}
-                    <div class ="nav-link">
+                    <div class ="nav-link search_div">
                         <input class="search form-control" type="text" name="q" placeholder="Search Encyclopedia">
                     </div>
                 </form>
