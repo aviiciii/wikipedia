@@ -1,33 +1,3 @@
 # Amazon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-E-commerce Website. Founded by Jeff Bezos.
+E-commerce Website. Founded by Jeff Bezos.
+#Hola amazon!

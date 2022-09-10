@@ -71,13 +71,12 @@ def edit(request, name):
 
     if request.method == 'POST':
         form = EditPage(request.POST)
-        print(form.errors)
+        
         if form.is_valid():
             # get post data
             title = form.cleaned_data["title"]
             content = form.cleaned_data["text"]
 
-            print(content)
             # verify title
             if title == name:
                 # check if title already exists
