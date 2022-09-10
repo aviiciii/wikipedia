@@ -35,3 +35,13 @@ def get_entry(title):
         return f.read().decode("utf-8")
     except FileNotFoundError:
         return None
+
+def check_sub(string, sub_str):
+    '''
+    Takes in a string and a substring and tells if 
+    the substring is present in the string.
+    '''
+    if sub_str.upper()  in string.upper():
+        return True
+    else:
+        return False

@@ -130,6 +130,13 @@ def search(request):
             if q.lower() == entry.lower():
                 return redirect('encyclopedia:article', name=entry)
 
-        
-        return render(request, 'encyclopedia/search.html')
+        substrings=set()
+        # check for substrings
+        for entry in util.list_entries():
+            if util.check_sub(entry, q):
+                substrings.add(entry)
+
+        return render(request, 'encyclopedia/search.html', {
+            'entries': substrings
+        })
     return render(request, 'encyclopedia/search.html')
