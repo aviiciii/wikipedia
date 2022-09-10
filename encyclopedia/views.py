@@ -120,4 +120,26 @@ def random(request):
     return redirect('encyclopedia:article', name= random_choice)
 
 def search(request):
-    ...
+
+    if request.method =='POST':
+        q = request.POST.get('q')
+        entries = util.list_entries()
+
+        # check perfect match
+        for entry in entries:
+            if q.lower() == entry.lower():
+                return redirect('encyclopedia:article', name=entry)
+
+        substrings=set()
+        # check for substrings
+        for entry in util.list_entries():
+            if util.check_sub(entry, q):
+                substrings.add(entry)
+            elif util.check_sub(q, entry):
+                substrings.add(entry)
+
+        return render(request, 'encyclopedia/search.html', {
+            'entries': substrings,
+            'search': q
+        })
+    return render(request, 'encyclopedia/search.html')
