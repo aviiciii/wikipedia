@@ -75,7 +75,13 @@ textarea {
     font-size: 24px;
 }
 .article h1{
-    padding-bottom: 20px;
+    padding-bottom: 18px;
+}
+.article h2{
+    padding-bottom: 16px;
+}
+.article h3{
+    padding-bottom: 14px;
 }
 .article .edit_btn{
     padding-top: 20px;
