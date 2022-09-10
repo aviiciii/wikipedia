@@ -70,3 +70,13 @@ textarea {
 .navbar-brand{
     font-size: 46px;
 }
+
+.article{
+    font-size: 24px;
+}
+.article h1{
+    padding-bottom: 20px;
+}
+.article .edit_btn{
+    padding-top: 20px;
+}
