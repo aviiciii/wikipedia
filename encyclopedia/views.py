@@ -135,8 +135,11 @@ def search(request):
         for entry in util.list_entries():
             if util.check_sub(entry, q):
                 substrings.add(entry)
+            elif util.check_sub(q, entry):
+                substrings.add(entry)
 
         return render(request, 'encyclopedia/search.html', {
-            'entries': substrings
+            'entries': substrings,
+            'search': q
         })
     return render(request, 'encyclopedia/search.html')
