@@ -15,18 +15,24 @@
     <body>
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
+                <span class = 'navbar-brand mb-0 h1 nav-link'>Wiki</span>
+                <br>
+                
                 <form action='{% url 'encyclopedia:search' %}' method = 'POST'>
                     {% csrf_token %}
-                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                    <div class ="nav-link">
+                        <input class="search form-control" type="text" name="q" placeholder="Search Encyclopedia">
+                    </div>
                 </form>
-                <div>
+                
+
+                <div class ="nav-link">
                     <a href="{% url 'encyclopedia:index' %}">Home</a>
                 </div>
-                <div>
+                <div class ="nav-link">
                     <a href="{% url 'encyclopedia:newpage' %}">Create New Page</a>
                 </div>
-                <div>
+                <div class ="nav-link">
                     <a href="{% url 'encyclopedia:random' %}">Random Page</a>
                 </div>
 
@@ -35,14 +41,15 @@
                 
             </div>
             <div class="main col-lg-10 col-md-9">
+                <div class="body_spacing">
 
-                {% for message in messages %}
-                    {{message}}
-                {% endfor %}
+                    {% for message in messages %}
+                        {{message}}
+                    {% endfor %}
 
-                {% block body %}
-                {% endblock %}
-
+                    {% block body %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
 

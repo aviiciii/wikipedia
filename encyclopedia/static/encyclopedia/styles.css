@@ -32,7 +32,7 @@ textarea {
 }
 
 .search {
-    width: 100%;
+    width: 80%;
     font-size: 15px;
     line-height: 15px;
 }
@@ -45,4 +45,18 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+.body_spacing {
+    padding-left: 4vh;
+}
+
+.list-group-item{
+    font-size: large;
+    width: 50%;
+}
+
+.nav-link a:hover{
+    font-style: normal;
+    text-decoration: none;
 }
