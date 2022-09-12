@@ -1,3 +1,0 @@
-# Samsung
-
-Electronics
