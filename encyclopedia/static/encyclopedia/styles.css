@@ -51,6 +51,7 @@ textarea {
 }
 
 .body_spacing {
+    padding-top: 40px;
     padding-left: 4vh;
 }
 
@@ -85,4 +86,13 @@ textarea {
 }
 .article .edit_btn{
     padding-top: 20px;
+}
+
+.messages{
+    font-size: large;
+    padding: 10px;
+    padding-left: 15px;
+}
+.article_message{
+    padding: 30px;
 }

@@ -18,7 +18,9 @@
                 <a href="{% url 'encyclopedia:edit' name=title %}" class="btn btn-outline-dark">Edit Page</a>
             </div>
         {% else %}
-            404: Page Not Found
+            <div class= 'article_message'>
+                <h1>404: Page Not Found</h1>
+            </div>
         {% endif %}
     </div>
 {% endblock %}

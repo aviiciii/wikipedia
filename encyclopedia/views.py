@@ -39,7 +39,7 @@ def newpage(request):
             # check if title already exists
             entries= util.list_entries()
             if title in entries:
-                messages.error(request, f'Page named {title} already exists.')
+                messages.error(request, f'ERROR: Page named {title} already exists.')
                 return redirect('encyclopedia:newpage')
 
             else:
@@ -78,7 +78,7 @@ def edit(request, name):
                 # check if title already exists
                 entries= util.list_entries()
                 if title not in entries:
-                    messages.error(request, f'Page named {title} doesn\'t exist.')
+                    messages.error(request, f'ERROR: Page named {title} doesn\'t exist.')
                     return redirect('encyclopedia:index')
 
                 else:
@@ -95,7 +95,7 @@ def edit(request, name):
                         messages.error(request, f'Some error occured while editing {title} page.')
                         return redirect('encyclopedia:index')
         else:
-            messages.error(request, f'Form invalid')
+            messages.error(request, f'ERROR: Form invalid')
             return redirect('encyclopedia:index')
 
     else:
@@ -110,7 +110,7 @@ def edit(request, name):
                 "form": form,
             })
         else:
-            messages.error(request, f'Page Not Found')
+            messages.error(request, f'ERROR: Page Not Found')
             return redirect('encyclopedia:index')
 
 
