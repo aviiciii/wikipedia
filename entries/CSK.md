@@ -1,2 +1,0 @@
-#CSK
-Chennai Super Kings
