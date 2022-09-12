@@ -42,10 +42,12 @@
             </div>
             <div class="main col-lg-10 col-md-9">
                 <div class="body_spacing">
-
-                    {% for message in messages %}
-                        {{message}}
-                    {% endfor %}
+                    
+                    <div class= 'messages'>
+                        {% for message in messages %}
+                            {{message}}
+                        {% endfor %}
+                    </div>
 
                     {% block body %}
                     {% endblock %}
