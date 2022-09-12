@@ -91,7 +91,7 @@ textarea {
 .messages{
     font-size: large;
     padding: 10px;
-    padding-left: 15px;
+    padding-left: 0vh;
 }
 .article_message{
     padding: 30px;
