@@ -94,6 +94,9 @@ def edit(request, name):
                     except:
                         messages.error(request, f'Some error occured while editing {title} page.')
                         return redirect('encyclopedia:index')
+            else:
+                messages.error(request, f'Couldn\'t save edits because page named {title} doesn\'t exist.')
+                return redirect('encyclopedia:index')
         else:
             messages.error(request, f'ERROR: Form invalid')
             return redirect('encyclopedia:index')
@@ -119,6 +122,7 @@ def random(request):
     random_choice = choice(entries)
     return redirect('encyclopedia:article', name= random_choice)
 
+
 def search(request):
 
     if request.method =='POST':
@@ -143,3 +147,4 @@ def search(request):
                 'search': q
             })
     return render(request, 'encyclopedia/search.html')
+
