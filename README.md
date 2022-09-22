@@ -2,7 +2,7 @@
 
 Website: <heroku>
 
-Demo Video: 
+Demo Video: https://youtu.be/uxuWI6Jd_xc
 
 A Encyclopedia web application inspired by Wikipedia.
 This project is an assignment for CS50 Web Development Course [(CS50 Web)](https://cs50.harvard.edu/web/2020/).
